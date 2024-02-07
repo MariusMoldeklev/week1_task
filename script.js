@@ -62,7 +62,8 @@ console.log(Object.entries(lastPerson));
 
 //! 1.3
 /* console.log the hobbies of the first person using Object.entries (tip: this is unnecessary code, but do it just to see the difference with what needs to be done later). Expected output is to be an array with 4 elements */
-
+//console.log(Object.entries.hobbies(firstPerson)) wrong way 
+console.log(Object.entries(peopleArrayWithObjects.hobbies));
 //! 1.4
 
 /* Use .map instead of Object.entries to achieve the same result in the console as in 1.2: */
