@@ -111,6 +111,7 @@ peopleArrayWithObjects.forEach(person => {
 /* Use .filter to find all persons who have the same hobby as firstPerson. Display this with the DOM */
 const divContainer = document.getElementById("container");
  const commonHobby = firstPerson.hobbies[0];
+ //får bare opp ein av personene som har  felles hobby, usikker på hvorfor  .hobbies[0,1,2,3,4] virket ikke heller men kan få opp Eva invfo hivis heg skifteer ut 0 med 2 men da forsvinner David
  const personWithCommonHobby = peopleArrayWithObjects.filter(person => person.hobbies.includes(commonHobby));
 
  personWithCommonHobby.forEach(person => {
