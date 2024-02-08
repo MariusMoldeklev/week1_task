@@ -75,7 +75,12 @@ console.log(lastPersonEntries)
 //! 1.5.
 
 /* Use .filter and .includes to find out which hobbies are common between firstPerson and lastPerson. Expected output is an array with common hobbies */
+const fisrtPersonHobbies = firstPerson.hobbies;
+const lastPersonHobbies = lastPerson.hobbies;
 
+const commonHobbies = fisrtPersonHobbies.filter(hobbi => lastPersonHobbies.includes(hobbi))
+
+console.log(commonHobbies)
 //! 1.6.
 
 /* Use .map to display all the persons with their information on their page with the DOM. It should also show what hobbies they have in common. Choose whether to use createElement or innerHTML. (Great if you do it both ways, comment out the unused code. Remember to use defer if the script tag is in the head!) */
