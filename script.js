@@ -109,7 +109,23 @@ peopleArrayWithObjects.forEach(person => {
 //! 1.7
 
 /* Use .filter to find all persons who have the same hobby as firstPerson. Display this with the DOM */
+const divContainer = document.getElementById("container");
+ const commonHobby = firstPerson.hobbies[0];
+ const personWithCommonHobby = peopleArrayWithObjects.filter(person => person.hobbies.includes(commonHobby));
 
+ personWithCommonHobby.forEach(person => {
+    const personDiv = document.createElement("div");
+
+    personDiv.innerHTML = `
+    <h2>${person.name}</h2>
+    <p>${person.age}</p>
+    <p>${person.email}</p>
+    <p>${person.country}</p>
+    <p>${person.hobbies.join(", ")}</p>
+    `;
+    
+    divContainer.appendChild(personDiv);
+ });
 //! 2
 
 /* Generate a random array with 10 random numbers between 1 and 100. console.log the array. */
