@@ -84,6 +84,27 @@ console.log(commonHobbies)
 //! 1.6.
 
 /* Use .map to display all the persons with their information on their page with the DOM. It should also show what hobbies they have in common. Choose whether to use createElement or innerHTML. (Great if you do it both ways, comment out the unused code. Remember to use defer if the script tag is in the head!) */
+const container = document.getElementById("div-container")
+
+peopleArrayWithObjects.forEach(person => {
+    const wrapperDiv = document.createElement("div");
+
+    wrapperDiv.innerHTML = `
+    <h2>${person.name}</h2>
+    <p>${person.age}</p>
+    <p>${person.email}</p>
+    <p>${person.country}</p>
+    <p>${person.hobbies.join(", ")}</p>
+    `;
+
+    const commonHobbiesTwo = person.hobbies.filter(hobby => firstPerson.hobbies.includes(hobby));
+
+    const commonHobbiesP = document.createElement("p");
+    commonHobbiesP.textContent = `Common Hobbies: ${commonHobbiesTwo.join(", ")}`;
+
+    wrapperDiv.appendChild(commonHobbiesP);
+    container.appendChild(wrapperDiv);
+});
 
 //! 1.7
 
