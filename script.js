@@ -157,21 +157,44 @@ array.forEach(number => {
 
 console.log(oddNumber);
 console.log(evenNumber);
+document.getElementById('oddNumbers').textContent = "Odd Numbers: " + oddNumbers.join(', ');
+document.getElementById('evenNumbers').textContent = "Even Numbers: " + evenNumbers.join(', ');
+
 //! 2.2
 
 /* Write a function that finds the largest number in the different arrays. Use a parameter so that the same function can be used on both arrays. Tips: Math.max() */
 
-function bigestNumber(array) {
+function largestNumber(array) {
     if (array.length === 0) {
         return "Empty array";
     }
     return Math.max(...array);
 }
+document.getElementById('largestOdd').textContent = "Largest Odd Number: " + largestNumber(oddNumbers);
+document.getElementById('largestEven').textContent = "Largest Even Number: " + largestNumber(evenNumbers);
+
 //! 2.3.
 
 /* Write a function that adds up all the numbers in the different arrays. So the sum of odd numbers in one result and the sum of even numbers in another result. Use a parameter in the function so that the same function can be used on both arrays. console.log the results. */
 
+function sumNumbers(array) {
+    return array.reduce((acc, curr) => acc + curr, 0);
+}
+document.getElementById('sumOdd').textContent = "Sum of Odd Numbers: " + sumNumbers(oddNumbers);
+document.getElementById('sumEven').textContent = "Sum of Even Numbers: " + sumNumbers(evenNumbers);
 //! 2.4
+function compareSums(array1, array2) {
+    const sum1 = sumNumbers(array1);
+    const sum2 = sumNumbers(array2);
+    if (sum1 > sum2) {
+        return "Odd Numbers have a larger sum.";
+    } else if (sum1 < sum2) {
+        return "Even Numbers have a larger sum.";
+    } else {
+        return "Both arrays have equal sums.";
+    }
+}
+document.getElementById('comparison').textContent = compareSums(oddNumbers, evenNumbers);
 
 /* Create a function that adds up the numbers in different arrays. Use 2 parameters to be able to use 2 different arrays (the odds and evens arrays you created earlier). Write an if-else statement that console logs which of the two arrays has the largest sum. Remember an else statement that says if both are equal (very unlikely) */
 
