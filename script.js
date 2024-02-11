@@ -157,19 +157,21 @@ array.forEach(number => {
 
 console.log(oddNumber);
 console.log(evenNumber);
-document.getElementById('oddNumbers').textContent = "Odd Numbers: " + oddNumbers.join(', ');
-document.getElementById('evenNumbers').textContent = "Even Numbers: " + evenNumbers.join(', ');
+document.getElementById('oddNumbers').textContent = "Odd Numbers: " + oddNumber.join(', ');
+document.getElementById('evenNumbers').textContent = "Even Numbers: " + evenNumber.join(', ');
+
 
 //! 2.2
 
 /* Write a function that finds the largest number in the different arrays. Use a parameter so that the same function can be used on both arrays. Tips: Math.max() */
 
-function largestNumber(array) {
+function largestNumber(oddNumber, evenNumber) {
     if (array.length === 0) {
         return "Empty array";
     }
     return Math.max(...array);
 }
+
 document.getElementById('largestOdd').textContent = "Largest Odd Number: " + largestNumber(oddNumbers);
 document.getElementById('largestEven').textContent = "Largest Even Number: " + largestNumber(evenNumbers);
 
@@ -177,7 +179,7 @@ document.getElementById('largestEven').textContent = "Largest Even Number: " + l
 
 /* Write a function that adds up all the numbers in the different arrays. So the sum of odd numbers in one result and the sum of even numbers in another result. Use a parameter in the function so that the same function can be used on both arrays. console.log the results. */
 
-function sumNumbers(array) {
+function sumNumbers(oddNumber, evenNumber) {
     return array.reduce((acc, curr) => acc + curr, 0);
 }
 document.getElementById('sumOdd').textContent = "Sum of Odd Numbers: " + sumNumbers(oddNumbers);
