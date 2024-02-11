@@ -160,6 +160,12 @@ console.log(evenNumber);
 
 /* Write a function that finds the largest number in the different arrays. Use a parameter so that the same function can be used on both arrays. Tips: Math.max() */
 
+function bigestNumber(array) {
+    if (array.length === 0) {
+        return "Empty array";
+    }
+    return Math.max(...array);
+}
 //! 2.3.
 
 /* Write a function that adds up all the numbers in the different arrays. So the sum of odd numbers in one result and the sum of even numbers in another result. Use a parameter in the function so that the same function can be used on both arrays. console.log the results. */
