@@ -143,7 +143,19 @@ const divContainer = document.getElementById("container");
 //! 2.1
 
 /* Separate odd and even numbers in the array you created in task 2 into two new arrays. console.log the new arrays. */
+const oddNumber = [];
+const evenNumber = [];
 
+array.forEach(number => {
+    if (number % 2 === 0) {
+        evenNumber.push(number);
+    } else {
+        oddNumber.push(number);
+    }
+});
+
+console.log(oddNumber);
+console.log(evenNumber);
 //! 2.2
 
 /* Write a function that finds the largest number in the different arrays. Use a parameter so that the same function can be used on both arrays. Tips: Math.max() */
