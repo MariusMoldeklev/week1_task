@@ -133,13 +133,14 @@ const divContainer = document.getElementById("container");
  function randomNumber (min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
  }
-
+ 
  //randomNumber()
  const array = [];
  for (let i = 0; i<10; i++){
-    array.push(randomNumber(1,100));
- }
- console.log(array)
+     array.push(randomNumber(1,100));
+    }
+    console.log(array)
+    document.getElementById('originalArray').textContent = "Original Array: " + array.join(', ');
 //! 2.1
 
 /* Separate odd and even numbers in the array you created in task 2 into two new arrays. console.log the new arrays. */
