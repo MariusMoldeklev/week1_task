@@ -198,11 +198,11 @@ function compareSums(array1, array2) {
 
 document.getElementById('oddNumbers').textContent = "Odd Numbers: " + oddNumber.join(', ');
 document.getElementById('evenNumbers').textContent = "Even Numbers: " + evenNumber.join(', ');
-document.getElementById('largestOdd').textContent = "Largest Odd Number: " + largestNumber(oddNumber); // Change oddNumbers to oddNumber
-document.getElementById('largestEven').textContent = "Largest Even Number: " + largestNumber(evenNumber); // Change evenNumbers to evenNumber
-document.getElementById('comparison').textContent = compareSums(oddNumber, evenNumber); // Change oddNumbers to oddNumber, and evenNumbers to evenNumber
-document.getElementById('sumOdd').textContent = "Sum of Odd Numbers: " + sumNumbers(oddNumber); // Change oddNumbers to oddNumber
-document.getElementById('sumEven').textContent = "Sum of Even Numbers: " + sumNumbers(evenNumber); // Change evenNumbers to evenNumber
+document.getElementById('largestOdd').textContent = "Largest Odd Number: " + largestNumber(oddNumber);
+document.getElementById('largestEven').textContent = "Largest Even Number: " + largestNumber(evenNumber);
+document.getElementById('comparison').textContent = compareSums(oddNumber, evenNumber);
+document.getElementById('sumOdd').textContent = "Sum of Odd Numbers: " + sumNumbers(oddNumber);
+document.getElementById('sumEven').textContent = "Sum of Even Numbers: " + sumNumbers(evenNumber);
 document.getElementById('originalArray').textContent = "Original Array: " + array.join(', ');
 
 
