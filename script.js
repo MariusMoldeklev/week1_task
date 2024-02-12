@@ -140,10 +140,9 @@ const divContainer = document.getElementById("container");
      array.push(randomNumber(1,100));
     }
     console.log(array)
-    document.getElementById('originalArray').textContent = "Original Array: " + array.join(', ');
-//! 2.1
-
-/* Separate odd and even numbers in the array you created in task 2 into two new arrays. console.log the new arrays. */
+    //! 2.1
+    
+    /* Separate odd and even numbers in the array you created in task 2 into two new arrays. console.log the new arrays. */
 const oddNumber = [];
 const evenNumber = [];
 
@@ -157,8 +156,6 @@ array.forEach(number => {
 
 console.log(oddNumber);
 console.log(evenNumber);
-document.getElementById('oddNumbers').textContent = "Odd Numbers: " + oddNumber.join(', ');
-document.getElementById('evenNumbers').textContent = "Even Numbers: " + evenNumber.join(', ');
 
 
 //! 2.2
@@ -172,9 +169,6 @@ function largestNumber(oddNumber, evenNumber) {
     return Math.max(...array);
 }
 
-document.getElementById('largestOdd').textContent = "Largest Odd Number: " + largestNumber(oddNumbers);
-document.getElementById('largestEven').textContent = "Largest Even Number: " + largestNumber(evenNumbers);
-
 //! 2.3.
 
 /* Write a function that adds up all the numbers in the different arrays. So the sum of odd numbers in one result and the sum of even numbers in another result. Use a parameter in the function so that the same function can be used on both arrays. console.log the results. */
@@ -182,8 +176,6 @@ document.getElementById('largestEven').textContent = "Largest Even Number: " + l
 function sumNumbers(oddNumber, evenNumber) {
     return array.reduce((acc, curr) => acc + curr, 0);
 }
-document.getElementById('sumOdd').textContent = "Sum of Odd Numbers: " + sumNumbers(oddNumbers);
-document.getElementById('sumEven').textContent = "Sum of Even Numbers: " + sumNumbers(evenNumbers);
 //! 2.4
 function compareSums(array1, array2) {
     const sum1 = sumNumbers(array1);
@@ -196,10 +188,18 @@ function compareSums(array1, array2) {
         return "Both arrays have equal sums.";
     }
 }
-document.getElementById('comparison').textContent = compareSums(oddNumbers, evenNumbers);
 
 /* Create a function that adds up the numbers in different arrays. Use 2 parameters to be able to use 2 different arrays (the odds and evens arrays you created earlier). Write an if-else statement that console logs which of the two arrays has the largest sum. Remember an else statement that says if both are equal (very unlikely) */
 
 //! 2.5:
+
+document.getElementById('oddNumbers').textContent = "Odd Numbers: " + oddNumber.join(', ');
+document.getElementById('evenNumbers').textContent = "Even Numbers: " + evenNumber.join(', ');
+document.getElementById('largestOdd').textContent = "Largest Odd Number: " + largestNumber(oddNumbers);
+document.getElementById('largestEven').textContent = "Largest Even Number: " + largestNumber(evenNumbers);
+document.getElementById('comparison').textContent = compareSums(oddNumbers, evenNumbers);
+document.getElementById('sumOdd').textContent = "Sum of Odd Numbers: " + sumNumbers(oddNumbers);
+document.getElementById('sumEven').textContent = "Sum of Even Numbers: " + sumNumbers(evenNumbers);
+document.getElementById('originalArray').textContent = "Original Array: " + array.join(', ');
 
 /* Display the results from all steps in task 2 (2, 2.1, 2.2, 2.3, 2.4) with DOM in a good way */
