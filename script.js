@@ -162,20 +162,23 @@ console.log(evenNumber);
 
 /* Write a function that finds the largest number in the different arrays. Use a parameter so that the same function can be used on both arrays. Tips: Math.max() */
 
-function largestNumber(oddNumber, evenNumber) {
+function largestNumber(array) {
     if (array.length === 0) {
         return "Empty array";
     }
     return Math.max(...array);
 }
 
+
+
 //! 2.3.
 
 /* Write a function that adds up all the numbers in the different arrays. So the sum of odd numbers in one result and the sum of even numbers in another result. Use a parameter in the function so that the same function can be used on both arrays. console.log the results. */
 
-function sumNumbers(oddNumber, evenNumber) {
+function sumNumbers(array) {
     return array.reduce((acc, curr) => acc + curr, 0);
 }
+
 //! 2.4
 function compareSums(array1, array2) {
     const sum1 = sumNumbers(array1);
@@ -195,11 +198,12 @@ function compareSums(array1, array2) {
 
 document.getElementById('oddNumbers').textContent = "Odd Numbers: " + oddNumber.join(', ');
 document.getElementById('evenNumbers').textContent = "Even Numbers: " + evenNumber.join(', ');
-document.getElementById('largestOdd').textContent = "Largest Odd Number: " + largestNumber(oddNumbers);
-document.getElementById('largestEven').textContent = "Largest Even Number: " + largestNumber(evenNumbers);
-document.getElementById('comparison').textContent = compareSums(oddNumbers, evenNumbers);
-document.getElementById('sumOdd').textContent = "Sum of Odd Numbers: " + sumNumbers(oddNumbers);
-document.getElementById('sumEven').textContent = "Sum of Even Numbers: " + sumNumbers(evenNumbers);
+document.getElementById('largestOdd').textContent = "Largest Odd Number: " + largestNumber(oddNumber); // Change oddNumbers to oddNumber
+document.getElementById('largestEven').textContent = "Largest Even Number: " + largestNumber(evenNumber); // Change evenNumbers to evenNumber
+document.getElementById('comparison').textContent = compareSums(oddNumber, evenNumber); // Change oddNumbers to oddNumber, and evenNumbers to evenNumber
+document.getElementById('sumOdd').textContent = "Sum of Odd Numbers: " + sumNumbers(oddNumber); // Change oddNumbers to oddNumber
+document.getElementById('sumEven').textContent = "Sum of Even Numbers: " + sumNumbers(evenNumber); // Change evenNumbers to evenNumber
 document.getElementById('originalArray').textContent = "Original Array: " + array.join(', ');
+
 
 /* Display the results from all steps in task 2 (2, 2.1, 2.2, 2.3, 2.4) with DOM in a good way */
